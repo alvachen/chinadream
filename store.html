@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+<title>商店</title>
+<meta charset="UTF-8">
+  <meta name="description" content="My game">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ <div class="alert-box success" id="alert1" style="display: none;" data-alert="">交易成功!
+    <a class="close" href="#">&times;</a>
+ </div>
+ <div class="alert-box success" id="alert2" style="display: none;" data-alert="">交易成功!
+    <a class="close" href="#">&times;</a>
+ </div>
+  <div class="alert-box alert" id="alert3" style="display: none;" data-alert="">交易失敗!
+    <a class="close" href="#">&times;</a>
+ </div>
+
+<div class="row">
+  <div class="large-4 columns">
+        <div class="panel">
+          <h5>This is a regular panel.</h5>
+          <img src="img/market.jpg">
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+  </div>
+  <div class="large-4 large-centered columns">
+     <table></table>
+      <label>選擇商品
+        <select id="choose">
+          <option value="米">米</option>
+          <option value="糖">糖</option>
+        </select>
+      </label>
+      <label>選擇數量
+        <input type="number" size="2" id="stuffnum" min="0" max="1000">
+      </label>
+      <br>
+      <button class="button [radius round] expand" id="buyit">買</button>
+      <button class="button [radius round] expand" id="sellit">賣</button>
+      <button class="button [radius round] expand" id="logout">登出</button>
+  </div>
+  <div class="large-4 columns"></div>
+</div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+  <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation.alert.js"></script>
+  <script type="text/javascript" src="js/trade.js"></script>
+</body>
+</html>
