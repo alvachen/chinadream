@@ -73,6 +73,7 @@ if (currentUser) {
 										        queryman.get(currentUser.id, { 
 										          success: function(userAgain) {
 										            userAgain.set("money", usermoney2);
+										            //以下暫用很蠢的的方式找出玩家交易的物品並更新
 										             if(thing ==="米"){
 										             	var playerrice = role[0].attributes.rice;
 										             	    playerrice+=buynum2;	

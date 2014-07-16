@@ -10,6 +10,28 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<nav class="top-bar" data-topbar id="topbar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><img src="img/china.png">中國夢</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+        <li class="active"><a href="#">Right Button Active</a></li>
+        <li class="has-dropdown">
+          <a href="#">Right Button Dropdown</a>
+          <ul class="dropdown">
+            <li><a href="#">First link in dropdown</a></li>
+          </ul>
+        </li>
+      </ul>
+  </section>
+</nav>
+
+<!-- 交易結果告知 -->
  <div class="alert-box success" id="alert1" style="display: none;" data-alert="">交易成功!
     <a class="close" href="#">&times;</a>
  </div>
@@ -20,6 +42,7 @@
     <a class="close" href="#">&times;</a>
  </div>
 
+<!-- 主畫面結構 -->
 <div class="row">
   <div class="large-4 columns">
         <div class="panel">
@@ -52,6 +75,10 @@
   <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="js/foundation.alert.js"></script>
+  <script src="js/foundation.topbar.js"></script>
   <script type="text/javascript" src="js/trade.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 </html>

@@ -3,3 +3,17 @@ table {
     border:2px solid #b0c4de;
 }
 
+#topbar{
+	margin-bottom: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav ul li img{
+	margin-right: 10px;
+}
+nav ul li h1{
+	font-size: 28px;
+}
