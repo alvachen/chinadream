@@ -3,8 +3,8 @@ Parse.initialize("vpelTYEJUqafKTVdrl0l2ujl248VmxGiePYYViUG", "H2tIkCOmWKSg4qyBRY
 
 $('button#login').click(function(){
 
-	var username = $('input#username').val();
-	var pwd = $('input#password').val();
+	var username = $('#username').val();
+	var pwd = $('#password').val();
 
 	 Parse.User.logIn(username,pwd, {
 	  success: function(user) {

@@ -4,13 +4,13 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a
 var Commodity = Parse.Object.extend("Commodity");
 var commodity = new Commodity();
  
-commodity.set("name","米");
-commodity.set("basevalue",20);
-commodity.set("buy",18);
-commodity.set("sell",22);
-commodity.set("quantity",80000);
-commodity.set("rare", 1);
-commodity.set("catagory","scw")
+commodity.set("name","絲綢");
+commodity.set("basevalue",200);
+commodity.set("buy",160);
+commodity.set("sell",320);
+commodity.set("quantity",5000);
+commodity.set("rare", 5);
+commodity.set("catagory","sc")
 
  
 commodity.save(null, {

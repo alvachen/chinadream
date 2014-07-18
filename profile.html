@@ -6,7 +6,8 @@
   <meta name="description" content="My game">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="css/foundationp.min.css">
+  <link rel="stylesheet" href="css/foundation-icons.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,13 +15,13 @@
 <nav class="top-bar" data-topbar id="topbar">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#"><img src="img/china.png">中國夢</a></h1>
+      <h1><a href="http://twodyssey.com/test/store.html"><img src="img/china.png">中國夢</a></h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
   <section class="top-bar-section">
     <ul class="right">
-        <li class="active"><a href="#">Right Button Active</a></li>
+        <li><a href="http://twodyssey.com/test/profile.html">個人資料</a></li>
         <li class="has-dropdown">
           <a href="#">Right Button Dropdown</a>
           <ul class="dropdown">
@@ -32,33 +33,49 @@
 </nav>
 
     <div class="row" id="main">
- 
+        <!-- 左方資訊欄 -->
         <div class="large-4 small-12 columns">
  
-          <img src="http://placehold.it/500x500&text=Logo">
+          <img src="img/player1.jpg">
  
-          <div class="hide-for-small panel">
-            <h3>Header</h3>
+          <div class="panel">
+            <h3 id='username'></h3>
             <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
             </h5>
           </div>
  
-          <a href="#">
-          <div class="panel callout radius">
-            <h6>99  items in your cart</h6>
+          <div class="panel">
+            <div id="staminalabel"></div>
+            <div class="progress radius" id="staminabar">
+  		      </div>
           </div>
-          </a>
+          <div class="panel">
+            <div><i class="fi-dollar-bill"><span id="money"></span></i></div>
+          </div>
  
         </div>
  
-     
- 
- 
-     
- 
+      
+      <!-- 右方資訊欄 -->
         <div class="large-8 columns">
           <div class="row">
- 
+          
+            <div class="large-12 columns">
+              <table id="allstuff">
+                <thead>
+                  <tr>
+                    <th width="150">商品名称</th>
+                    <th width="150">拥有数量</th>
+                    <th width="150">其他</th>
+                  </tr>
+                </thead>
+                <tbody>
+               </tbody>
+              </table>
+            </div>
+
+
+
             <div class="large-4 small-6 columns">
               <img src="http://placehold.it/1000x1000&text=Thumbnail">
  
@@ -151,7 +168,7 @@
           <div class="row">
  
             <div class="large-6 columns">
-              <p>&copy;2014 AlvaChen.All Rights Reserved.</p>
+              <p>&copy;2014 AlvaChen. All Rights Reserved.</p>
             </div>
  
             <div class="large-6 columns">
@@ -160,6 +177,9 @@
           </div>
         </div>
       </footer>
- 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+  <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+  <script type="text/javascript" src="js/profile.js"></script>
 </body>
 </html>

@@ -5,17 +5,32 @@
 <meta charset="UTF-8">
   <meta name="description" content="My Bmob App">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation-icons.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <h2>Log In</h2>
-  <input type="text" id="username" placeholder="Username" />
-  <input type="password" id="password" placeholder="Password" />
-  <button id="login">登入</button>
+
+<div id="titlepic"><img src="img/chinesedream.png"><h4>beta版1.0</h4></div>
+<div class="form-1">
+    <p class="field">
+        <i class="fi-torso"></i>
+        <input type="text" name="login" id="username" placeholder="帳號">
+    </p>
+    <p class="field">
+        <i class="fi-lock"></i>
+        <input type="password" name="password" id="password" placeholder="密碼">
+    </p>        
+    <p class="submit">
+        <button name="submit" id="login"><i class="fi-arrow-right"></i></button>
+    </p>
+</div>
 
 
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
   <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
 </body>

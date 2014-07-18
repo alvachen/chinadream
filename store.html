@@ -5,12 +5,12 @@
 <meta charset="UTF-8">
   <meta name="description" content="My game">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
+<!-- TopBar -->
 <nav class="top-bar" data-topbar id="topbar">
   <ul class="title-area">
     <li class="name">
@@ -20,7 +20,7 @@
   </ul>
   <section class="top-bar-section">
     <ul class="right">
-        <li class="active"><a href="#">Right Button Active</a></li>
+        <li><a href="http://twodyssey.com/test/profile.html">個人資料</a></li>
         <li class="has-dropdown">
           <a href="#">Right Button Dropdown</a>
           <ul class="dropdown">
@@ -43,12 +43,13 @@
  </div>
 
 <!-- 主畫面結構 -->
-<div class="row">
+<div class="row" id="main">
   <div class="large-4 columns">
         <div class="panel">
-          <h5>歡迎來到廣州市場</h5>
-          <img src="img/market.jpg">
-          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+          <h4>歡迎來到廣州市場</h4>
+          <img src="img/smarket.jpg">
+          <p>乾隆二十二年（1757年）清朝下令鎖國，僅保留廣州一地作為對外通商港口，史稱"一口通商"，於是廣州口岸成為西方商船雲集之地，獨攬全國外貿</p>
+          <p>1840年後，鴉片戰爭戰敗，被迫簽訂《南京條約》，實施“五口通商”，廣州隨即失去了對外貿易的獨特地位</p>
         </div>
   </div>
   <div class="large-4 large-centered columns">
@@ -57,6 +58,7 @@
         <select id="choose">
           <option value="米">米</option>
           <option value="糖">糖</option>
+          <option value="絲綢">絲綢</option>
         </select>
       </label>
       <label>選擇數量

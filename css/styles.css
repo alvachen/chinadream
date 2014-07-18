@@ -1,19 +1,39 @@
+/*-----General-----*/
 table {
-    width: 300px;
+    width: 100%;
     border:2px solid #b0c4de;
 }
 
-#topbar{
-	margin-bottom: 20px;
+#main{
+	margin-top: 20px;
 }
 
 a {
 	text-decoration: none;
 }
 
+/*-----TopBar-----*/
 nav ul li img{
 	margin-right: 10px;
 }
 nav ul li h1{
 	font-size: 28px;
 }
+
+/*-----Profile-----*/
+#staminabar{
+	margin-top: -8px;
+}
+
+#staminalabel{
+	margin-top: -14px;
+}
+
+.fi-dollar-bill {
+   font-size: 24px;
+}
+
+#allstuff tr th{
+	text-align: justify;
+}
+
