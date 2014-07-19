@@ -23,7 +23,6 @@ nav ul li h1{
 /*-----Profile-----*/
 #staminabar{
 	margin-top: -8px;
-	cursor: pointer;
 }
 
 #staminalabel{
@@ -37,4 +36,10 @@ nav ul li h1{
 #allstuff tr th{
 	text-align: justify;
 }
+
+#sleepicon{
+	cursor: pointer;
+}
+
+
 

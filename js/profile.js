@@ -9,7 +9,7 @@ if (currentUser) {
 		var getstaminalabel = document.getElementById("staminalabel");
 		var getmoney = document.getElementById("money");
 		var $table = $('#allstuff tbody');
-		var $staminabar = $('#staminabar');
+		var $sleep = $('#sleepicon');
 
 		//找出玩家的資料
 		var queryrole = new Parse.Query(Parse.User);
@@ -35,7 +35,7 @@ if (currentUser) {
 			}
 		});
 		//點擊回覆體力
-		$staminabar.on('click',function(){
+		$sleep.on('click',function(){
 			//先找玩家
 			var queryman = new Parse.Query(Parse.User);
 			queryman.get(currentUser.id, { 
@@ -58,10 +58,12 @@ if (currentUser) {
 		  						sta_results.save();
 		  						userAgain.set("stamina", 100);
 								userAgain.save();
-								getstaminalabel.innerHTML = "<h4>體力: "+100+"</h4>"
+								getstaminalabel.innerHTML = "<h4>體力: "+100+"</h4>";
 								getstamina.innerHTML = "<span class='meter' style='width:"+100+"%'"+ "id='staminanum'></span>";
 		  					}else{
-		  						alert("你最近已經回覆過體力,請晚點再回");
+		  						userAgain.set("try",1);
+								userAgain.save();
+								alert("你最近已經回覆過體力,請晚點再回");
 		  					}
 
 	  					}
