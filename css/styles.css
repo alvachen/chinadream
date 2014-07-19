@@ -23,6 +23,7 @@ nav ul li h1{
 /*-----Profile-----*/
 #staminabar{
 	margin-top: -8px;
+	cursor: pointer;
 }
 
 #staminalabel{
