@@ -41,5 +41,13 @@ nav ul li h1{
 	cursor: pointer;
 }
 
+#left{
+	background: -webkit-linear-gradient(-270deg,#18536A,#23a0d1);
+}
+#playerimg{
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
 
 

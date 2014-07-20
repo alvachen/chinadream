@@ -20,6 +20,9 @@ if (currentUser) {
     var $table = $('table');
     var $buyit = $('#buyit');
     var $sellit = $('#sellit');
+    var refresh = function(){
+    	window.location.reload(true);
+    }
 
 	//抓取商品資料
 	var Commodity = Parse.Object.extend("Commodity");
@@ -102,15 +105,15 @@ if (currentUser) {
 											        setTimeout('window.location.reload(true)',1800); //完成交易则自动刷新画面
 										  		}else{
 										  			$alert3.append("<span>"+"交易商品不足"+"</span>").fadeIn(500);
-										  			setTimeout('window.location.reload(true)',1300); 
+										  			setTimeout(refresh,1300); 
 										  		}
 									 		 }else{
 									 		 	$alert3.append("<span>"+"你的錢不夠喔"+"</span>").fadeIn(500);
-									 		 	setTimeout('window.location.reload(true)',1300); 
+									 		 	setTimeout(refresh,1300); 
 									 		 }
 									 	}else{
 									 		$alert3.append("<span>"+"你的體力不夠喔"+"</span>").fadeIn(500);
-									 		setTimeout('window.location.reload(true)',1300);
+									 		setTimeout(refresh,1300);
 									 	}
 								      }
 									});
@@ -166,10 +169,10 @@ if (currentUser) {
 																		object.save();
 													      				userAgain.save();
 													      				$alert2.append("<span>"+" "+"賣出"+sellnum+"單位"+thing+"</span>").fadeIn(500); //交易成功提示
-																		setTimeout('window.location.reload(true)',1800); //完成交易则自动刷新画面 
+																		setTimeout(refresh,1800); //完成交易则自动刷新画面 
 												             		}else{
 												             			$alert3.append("<span>"+"擁有商品不夠賣"+"</span>").fadeIn(500);
-									 		 							setTimeout('window.location.reload(true)',1300); 
+									 		 							setTimeout(refresh,1300); 
 												             		}											      			  
 											      			}
 											      		  	else if(thing ==="糖"){
@@ -183,10 +186,10 @@ if (currentUser) {
 																			object.save();
 																			userAgain.save();
 																			$alert2.append("<span>"+" "+"賣出"+sellnum+"單位"+thing+"</span>").fadeIn(500); //交易成功提示
-																			setTimeout('window.location.reload(true)',1800); //完成交易则自动刷新画面 
+																			setTimeout(refresh,1800); //完成交易则自动刷新画面 
 													             		}else{
 													             			$alert3.append("<span>"+"擁有商品不夠賣"+"</span>").fadeIn(500);
-									 		 								setTimeout('window.location.reload(true)',1300); 
+									 		 								setTimeout(refresh,1300); 
 													             		}
 											      			}else{
 											      				var playersilk = role[0].attributes.silk;
@@ -199,21 +202,21 @@ if (currentUser) {
 																			object.save();
 																			userAgain.save();
 																			$alert2.append("<span>"+" "+"賣出"+sellnum+"單位"+thing+"</span>").fadeIn(500); //交易成功提示
-																			setTimeout('window.location.reload(true)',1800); //完成交易则自动刷新画面 
+																			setTimeout(refresh,1800); //完成交易则自动刷新画面 
 													             		}else{
 													             			$alert3.append("<span>"+"擁有商品不夠賣"+"</span>").fadeIn(500);
-									 		 								setTimeout('window.location.reload(true)',1300); 
+									 		 								setTimeout(refresh,1300); 
 													             		}
 											      			}			
 													    }
 													});   		  		
 									 		  }else{
 									 		 	$alert3.append("<span>"+"交易數量異常"+"</span>").fadeIn(500);
-									 		 	setTimeout('window.location.reload(true)',1300); 
+									 		 	setTimeout(refresh,1300); 
 									 		  }	
 									 	}else{
 									 		$alert3.append("<span>"+"你的體力不夠喔"+"</span>").fadeIn(500);
-									 		setTimeout('window.location.reload(true)',1300);
+									 		setTimeout(refresh,1300);
 									 	}	  							 	 									  
 						            }
 						          });

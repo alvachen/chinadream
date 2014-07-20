@@ -10,6 +10,9 @@ if (currentUser) {
 		var getmoney = document.getElementById("money");
 		var $table = $('#allstuff tbody');
 		var $sleep = $('#sleepicon');
+		var $thoughts = $('#thoughts');
+		var $thoughts2 = $('#thoughts2');
+		var $thoughts3 = $('#thoughts3');
 
 		//找出玩家的資料
 		var queryrole = new Parse.Query(Parse.User);
@@ -22,7 +25,9 @@ if (currentUser) {
 				var userice = role[0].attributes.rice;
 				var usesugar = role[0].attributes.sugar;
 				var usesilk = role[0].attributes.silk;
+				var creed = role[0].attributes.creed
 
+				//顯示體力處的地方
 				getstaminalabel.innerHTML = "<h4>體力: "+staminashow+"</h4>"
 				getstamina.innerHTML = "<span class='meter' style='width:"+staminashow+"%'"+ "id='staminanum'></span>";
 				
@@ -30,7 +35,9 @@ if (currentUser) {
 				$table.append("<tr>"+"<td>米</td>"+"<td>"+userice+"</td>"+"<td></td>"+"</tr>");
 				$table.append("<tr>"+"<td>糖</td>"+"<td>"+usesugar+"</td>"+"<td></td>"+"</tr>");
 				$table.append("<tr>"+"<td>絲綢</td>"+"<td>"+usesilk+"</td>"+"<td></td>"+"</tr>");
-
+				$thoughts.append(creed[0]);
+				$thoughts2.append(creed[1]);
+				$thoughts3.append(creed[2]);
 
 			}
 		});
@@ -51,7 +58,7 @@ if (currentUser) {
 					querysta.find({
 	  					success: function(results) {
 	  					var sta_results = results[0];
-	  					var sta_time_compare =Date.parse(results[0].updatedAt)+600000; //取出體力資料庫裡玩家最近回體過的時間並加上數字條件,每60000代表一分鐘,用來分隔CD時間
+	  					var sta_time_compare =Date.parse(sta_results.updatedAt)+600000; //取出體力資料庫裡玩家最近回體過的時間並加上數字條件,每60000代表一分鐘,用來分隔CD時間
 		  					if (sta_time_user>sta_time_compare){ //是否可以回覆體力的判斷
 		  						var confirm = sta_results.get('confirm')+1
 		  						sta_results.set("confirm",confirm);
@@ -61,7 +68,7 @@ if (currentUser) {
 								getstaminalabel.innerHTML = "<h4>體力: "+100+"</h4>";
 								getstamina.innerHTML = "<span class='meter' style='width:"+100+"%'"+ "id='staminanum'></span>";
 		  					}else{
-		  						userAgain.set("try",1);
+		  						userAgain.set("try",1);//即使不能回體力,也幫他更新資料庫的時間
 								userAgain.save();
 								alert("你最近已經回覆過體力,請晚點再回");
 		  					}

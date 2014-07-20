@@ -1,0 +1,70 @@
+body { 
+  background: url(../img/churchbg3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+#feedback{
+	height:250px;
+}
+
+/******對話框********/
+#npc{
+	margin: 0 -10px 0 20px;
+}
+
+.talkborder{
+	display: inline-block;
+	float: right;
+	width:60%;
+	height:90px;
+	text-align:left;
+	background:#fff;
+	position:relative;
+	border: solid 1px #333;
+	border-radius: 10px;
+	margin:10px;
+	margin-left: -30px;
+	padding:10px;
+	z-index: 2;
+}
+
+.talkborder .arrow_l_int{
+	width:0px;
+	height:0px;
+	border-width:15px;
+	border-style:solid;
+	border-color:transparent #333 transparent  transparent ;
+	position:absolute;
+	top:20%;
+	left:-30px;
+}
+
+.talkborder .arrow_l_out{
+	width:0px;
+	height:0px;
+	border-width:15px;
+	border-style:solid;
+	border-color:transparent #fff transparent transparent ;
+	position:absolute;
+	top:20%;
+	left:-29px;
+}
+
+.action{
+	display: block;
+	margin: 40px;
+}
+
+.glyphicon{
+	font-size: 2.5em;
+	letter-spacing: 1em;
+	cursor: pointer;
+}
+.glyphicon:hover{
+	color:#6495ed;
+}

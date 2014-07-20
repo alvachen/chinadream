@@ -15,9 +15,15 @@ $('form').submit(function(evt){
 	user.set("birth", 1);
 	user.set("rice", 0);
 	user.set("sugar", 0);
+	user.set("silk", 0);
+	user.set("creed", [10,10,10]);
 	user.signUp(null, {
 	  success: function(user) {
-	    // Hooray! Let them use the app now.
+	    	var Sta = Parse.Object.extend("Sta");
+			var sta = new Sta();
+			sta.set("user",user);
+			sta.set("confirm",0);
+			sta.save();	
 	    alert("注册成功");
 	  },
 	  error: function(user, error) {
