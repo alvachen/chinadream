@@ -21,6 +21,10 @@ nav ul li h1{
 }
 
 /*-----Profile-----*/
+body{
+	background-color: #ffffe0;
+}
+
 #staminabar{
 	margin-top: -8px;
 }
