@@ -16,7 +16,8 @@ $('form').submit(function(evt){
 	user.set("rice", 0);
 	user.set("sugar", 0);
 	user.set("silk", 0);
-	user.set("creed", [10,10,10]);
+	user.set("economy", 0);
+	user.set("creed", [2,2,2]);
 	user.signUp(null, {
 	  success: function(user) {
 	    	var Sta = Parse.Object.extend("Sta");

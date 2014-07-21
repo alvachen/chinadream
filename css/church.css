@@ -6,11 +6,22 @@ body {
   background-size: cover;
 }
 
-
-
-#feedback{
-	height:250px;
+h1{
+	color: #f0ffff;
 }
+
+/***FEEDBACK區***/
+#feedback{
+	height:280px;
+}
+#backalert{
+	font-size: 1em; 
+	height: 10px;
+	line-height: 8px;
+}
+
+
+
 
 /******對話框********/
 #npc{
@@ -60,6 +71,8 @@ body {
 	margin: 40px;
 }
 
+
+/******按鈕********/
 .glyphicon{
 	font-size: 2.5em;
 	letter-spacing: 1em;
@@ -67,4 +80,12 @@ body {
 }
 .glyphicon:hover{
 	color:#6495ed;
+}
+
+#learnpolitics:active,#learneconomy:active{
+background-color: #008080;
+transition: background-color 0.2s ease;
+-moz-transition: background-color 0.2s ease; /* Firefox 4 */
+-webkit-transition: background-color 0.2s ease; /* Safari 和 Chrome */
+-o-transition: background-color 0.2s ease; /* Opera */
 }
