@@ -20,6 +20,7 @@ if (currentUser) {
     var $table = $('table');
     var $buyit = $('#buyit');
     var $sellit = $('#sellit');
+    var $ajaxloader = $('#ajaxloader');
     var refresh = function(){
     	window.location.reload(true);
     }
@@ -39,6 +40,7 @@ if (currentUser) {
 	      var ask = commodity.get("sell");
 	      var quant = commodity.get("quantity");
 	      $table.append("<tr>"+"<td>" + name + "</td>"+"<td>"+bid+"</td>"+"<td>"+ask+"</td>"+"<td>"+quant+"</td>"+"</tr>");
+	      $ajaxloader.remove();//读取完毕删除icon
 	      }
 	      	//買商品
 			$buyit.on('click',function(){

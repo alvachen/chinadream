@@ -10,8 +10,7 @@ if (currentUser) {
     $comment1 = $('#comment1');
 	//------變數定義區--------
 	var test_sta = function(userAgain){//取出玩家體力值
-		var getsta = userAgain.get("stamina");
-		return getsta;
+		return userAgain.get("stamina");
 	}
 	var consume_sta = function(userAgain,x){ //扣除玩家行動消耗的體力
 		var after_sta = test_sta(userAgain) - x;

@@ -9,6 +9,14 @@ body {
 h1{
 	color: #f0ffff;
 }
+.glyphicon-plus{
+	display: inline-block;
+	padding: 20px; 
+	font-size: 3em;
+	color: #fffafa;
+}
+
+
 
 /***FEEDBACK區***/
 #feedback{
