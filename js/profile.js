@@ -21,7 +21,7 @@ if (currentUser) {
 			success: function(role) {
 				getname.innerHTML = role[0].attributes.username; //拿取玩家姓名并展现
 				var staminashow = role[0].attributes.stamina; //拿取玩家体力并展现
-				getmoney.innerHTML = role[0].attributes.money; //拿取玩家金钱并展现
+				getmoney.innerHTML =+role[0].attributes.money; //拿取玩家金钱并展现
 				var userice = role[0].attributes.rice;
 				var usesugar = role[0].attributes.sugar;
 				var usesilk = role[0].attributes.silk;
