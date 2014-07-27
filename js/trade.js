@@ -91,10 +91,14 @@ if (currentUser) {
 											      		  	var playersugar = role[0].attributes.sugar;
 											             	var playersugar = playersugar+buynum2;
 											      			  userAgain.set("sugar",playersugar);
-											      			}else{
+											      			}else if(thing ==="絲綢"){
 											      			var playersilk = role[0].attributes.silk;
 											             	var playersilk = playersilk+buynum2;
 											      			  userAgain.set("silk",playersilk);
+											      			}else{
+											      			var playersword = role[0].attributes.sword;
+											             	var playersword = playersword+buynum2;
+											      			 userAgain.set("sword",playersword);
 											      			}
 											            userAgain.save(null, {										              
 											              error: function(userAgain, error) {
@@ -104,7 +108,7 @@ if (currentUser) {
 											          }
 											        });										      
 											        $alert1.append("<span>"+" "+"買進"+buynum+"單位"+thing+"</span>").fadeIn(500); //交易成功提示
-											        setTimeout('window.location.reload(true)',1800); //完成交易则自动刷新画面
+											        setTimeout(refresh,1800); //完成交易则自动刷新画面
 										  		}else{
 										  			$alert3.append("<span>"+"交易商品不足"+"</span>").fadeIn(500);
 										  			setTimeout(refresh,1300); 
@@ -193,11 +197,27 @@ if (currentUser) {
 													             			$alert3.append("<span>"+"擁有商品不夠賣"+"</span>").fadeIn(500);
 									 		 								setTimeout(refresh,1300); 
 													             		}
-											      			}else{
+											      			}else if(thing ==="絲綢"){
 											      				var playersilk = role[0].attributes.silk;
 												             	var playersilk = playersilk-sellnum2;
 													             	if(playersilk>=0){ //玩家擁有的物品必須足夠賣
 													             			userAgain.set("silk",playersilk);
+													             			userAgain.set("money", usermoney2);
+													             			userAgain.set("stamina", userstamina);
+													      					object.set('quantity',afternum); //将交易后的数量存回市場资料库
+																			object.save();
+																			userAgain.save();
+																			$alert2.append("<span>"+" "+"賣出"+sellnum+"單位"+thing+"</span>").fadeIn(500); //交易成功提示
+																			setTimeout(refresh,1800); //完成交易则自动刷新画面 
+													             		}else{
+													             			$alert3.append("<span>"+"擁有商品不夠賣"+"</span>").fadeIn(500);
+									 		 								setTimeout(refresh,1300); 
+													             		}
+											      			}else{
+											      				var playersword = role[0].attributes.sword;
+												             	var playersword = playersword-sellnum2;
+													             	if(playersword>=0){ //玩家擁有的物品必須足夠賣
+													             			userAgain.set("sword",playersword);
 													             			userAgain.set("money", usermoney2);
 													             			userAgain.set("stamina", userstamina);
 													      					object.set('quantity',afternum); //将交易后的数量存回市場资料库

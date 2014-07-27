@@ -10,7 +10,29 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	    <div class="row">
+
+<!-- TopBar -->
+<nav class="top-bar" data-topbar id="topbar">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><img src="img/china.png" id="squarelogo">中國夢</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+        <li><a href="http://twodyssey.com/test/profile.html">個人資料</a></li>
+        <li class="has-dropdown">
+          <a href="#">Right Button Dropdown</a>
+          <ul class="dropdown">
+            <li><a href="#">First link in dropdown</a></li>
+          </ul>
+        </li>
+      </ul>
+  </section>
+</nav>
+
+	<div class="row" id="main">
     <div class="large-12 columns">
        
  
@@ -26,13 +48,16 @@
  
           <div class="large-6 columns">
  
-            <h3 class="show-for-small">Header<hr/></h3>
+            <h3 class="show-for-small">消息傳聞<hr/></h3>
  
             <div class="panel">
-              <h4 class="hide-for-small">Header<hr/></h4>
-            <h5 class="subheader">Fusce ullamcorper mauris in eros dignissim molestie posuere felis blandit. Aliquam erat volutpat. Mauris ultricies posuere vehicula. Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros. Pellentesque consectetur tempus mi iaculis bibendum. Ut vel dolor sed eros tincidunt volutpat ac eget leo.</h5>
+                <h4 class="hide-for-small">消息傳聞<hr/></h4>
+                <h5 class="subheader">
+                  最近無大事
+                </h5>
             </div>
             
+          <!-- 宣傳和招募區 -->  
             <div class="row" data-equalizer>
                 <div class="large-6 small-6 columns panel" data-equalizer-watch>
                     <h6 class="subheader">
@@ -48,7 +73,15 @@
                 </div>
    
                 <div class="large-6 small-6 columns panel" data-equalizer-watch>
-                      <div class="subheader"><img src="img/recruit.png" id="recruit"></div>
+                      <div class="subheader">
+                       <a href="#" data-dropdown="drop2">
+                        <img src="img/recruit.png" id="recruit">
+                       </a><br>
+                        <ul id="drop2" data-dropdown-content class="f-dropdown">
+                          <li><a id="recruit_a">公開大舉募兵</a></li>
+                          <li><a id="recruit_b">私下低調募兵</a></li>
+                        </ul>
+                      </div>
                 </div>
             </div>
  

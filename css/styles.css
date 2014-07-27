@@ -78,6 +78,11 @@ body{
 }
 
 /*-----Square-----*/
+
+#squarelogo{
+	margin-left: 40px;
+}
+
 .subheader{
 	position: relative;
 }
